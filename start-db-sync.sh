@@ -5,4 +5,4 @@ then
     CMD="docker compose"
 fi
 
-$CMD --env-file env up -d
+$CMD -p db-sync -f ./docker-compose-db-sync.yml --env-file env up

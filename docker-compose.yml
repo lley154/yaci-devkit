@@ -11,7 +11,7 @@ services:
       - "${HOST_OGMIOS_PORT}:1337"
       - "${HOST_KUPO_PORT}:1442"
     volumes:
-      - cluster-data:/clusters
+      - ./cluster-data:/clusters
     env_file:
       - env
     entrypoint:
@@ -25,5 +25,6 @@ services:
     env_file:
       - env
 
-volumes:
-  cluster-data:
+networks:
+  default:
+    name: devnet
