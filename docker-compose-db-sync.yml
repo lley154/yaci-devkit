@@ -48,7 +48,7 @@ services:
       - ./config/:/config
       - ./cluster-data/default/node-spo1/node.sock:/node-ipc/node.socket
       - ./cluster-data:/clusters
-    command: ["--config /config/db-sync-config.yaml", "--socket-path /node-ipc/node.socket"]
+    command: ["--config /config/db-sync-config.yaml", "--socket-path /node-ipc/node.socket", "--force-indexes"]
     restart: on-failure
     logging:
       driver: "json-file"
