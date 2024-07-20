@@ -1,5 +1,5 @@
 yaci_store_enabled=true
-ogmios_enabled=false
+ogmios_enabled=true
 
 #######################################################
 # Ports
